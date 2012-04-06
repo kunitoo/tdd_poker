@@ -18,6 +18,10 @@ public class Player {
     }
 
     public boolean isTwoPair() {
-        return false;
+        Set<Integer> numberSet = new HashSet<Integer>();
+        for (Card card : cards) {
+            numberSet.add(card.number);
+        }
+        return numberSet.size() == 3;
     }
 }
