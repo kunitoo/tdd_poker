@@ -7,10 +7,13 @@ import java.util.Set;
 
 public class Player {
 
-    public List<Integer> numbers = new ArrayList<Integer>();
+    public List<Card> cards = new ArrayList<Card>();
 
     public boolean isOnePair() {
-        Set<Integer> numberSet = new HashSet<Integer>(numbers);
+        Set<Integer> numberSet = new HashSet<Integer>();
+        for (Card card : cards) {
+            numberSet.add(card.number);
+        }
         return numberSet.size() == 4;
     }
 }
