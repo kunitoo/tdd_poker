@@ -16,6 +16,11 @@ public class PlayerTest {
 
     @Test
     public void testIsOnePairTrue() {
+        player.numbers.add(1);
+        player.numbers.add(1);
+        player.numbers.add(2);
+        player.numbers.add(3);
+        player.numbers.add(4);
         assertTrue(player.isOnePair());
     }
 }
