@@ -33,4 +33,14 @@ public class PlayerTest {
         player.cards.add(Card.getInstance(5, Suit.Hearts));
         assertFalse(player.isOnePair());
     }
+
+    @Test
+    public void testIsTwoPairTrue() {
+        player.cards.add(Card.getInstance(1, Suit.Clubs));
+        player.cards.add(Card.getInstance(1, Suit.Diamonds));
+        player.cards.add(Card.getInstance(2, Suit.Clubs));
+        player.cards.add(Card.getInstance(2, Suit.Spades));
+        player.cards.add(Card.getInstance(5, Suit.Hearts));
+        assertTrue(player.isTwoPair());
+    }
 }

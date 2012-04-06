@@ -16,4 +16,8 @@ public class Player {
         }
         return numberSet.size() == 4;
     }
+
+    public boolean isTwoPair() {
+        return false;
+    }
 }
