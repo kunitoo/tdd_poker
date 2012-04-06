@@ -16,21 +16,21 @@ public class PlayerTest {
 
     @Test
     public void testIsOnePairTrue() {
-        player.cards.add(new Card() {{number = 1;}});
-        player.cards.add(new Card() {{number = 1;}});
-        player.cards.add(new Card() {{number = 2;}});
-        player.cards.add(new Card() {{number = 3;}});
-        player.cards.add(new Card() {{number = 4;}});
+        player.cards.add(Card.getInstance(1, Suit.Clubs));
+        player.cards.add(Card.getInstance(1, Suit.Hearts));
+        player.cards.add(Card.getInstance(2, Suit.Diamonds));
+        player.cards.add(Card.getInstance(3, Suit.Clubs));
+        player.cards.add(Card.getInstance(4, Suit.Clubs));
         assertTrue(player.isOnePair());
     }
 
     @Test
     public void testIsOnePairFalse() {
-        player.cards.add(new Card() {{number = 1;}});
-        player.cards.add(new Card() {{number = 2;}});
-        player.cards.add(new Card() {{number = 3;}});
-        player.cards.add(new Card() {{number = 4;}});
-        player.cards.add(new Card() {{number = 5;}});
+        player.cards.add(Card.getInstance(1, Suit.Clubs));
+        player.cards.add(Card.getInstance(2, Suit.Diamonds));
+        player.cards.add(Card.getInstance(3, Suit.Clubs));
+        player.cards.add(Card.getInstance(4, Suit.Clubs));
+        player.cards.add(Card.getInstance(5, Suit.Hearts));
         assertFalse(player.isOnePair());
     }
 }
